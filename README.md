@@ -1,8 +1,8 @@
+# MODULE-1: Some terms to understand
+
 •	Absorption: The movement of a compound/drug from the site of administration to the bloodstream. This process involves several phases and depends upon the method of delivery (oral, topical, intravenous etc.). Lipinski's rule of 5 famously predicts that poor absorption is more likely when there are more than 5 hydrogen bond donors, 10 hydrogen bond acceptors, a molecular weight greater than 500 and a calculated LogP greater than 5.
 
 •	Chemical stability: The stability of a drug is critical to efficacy, as the loss of a drug through a chemical reaction will result in reduction of potency and may result in degradation into a toxic substance. To learn more about chemical stability of drug substances, read this chapter from the Stability of Drugs and Dosage Forms.
-
-# MODULE-1: Some terms to understand
 
 •	Directed screen: A type of high-throughput screen that tests large compound libraries with user-intervention involved in the selecting of compound chemotypes.
 

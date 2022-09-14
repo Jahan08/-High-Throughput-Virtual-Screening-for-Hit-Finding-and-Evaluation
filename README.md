@@ -1,4 +1,4 @@
-# MODULE-1: Some terms to understand
+# Module 1: Some terms to understand
 
 •	Absorption: The movement of a compound/drug from the site of administration to the bloodstream. This process involves several phases and depends upon the method of delivery (oral, topical, intravenous etc.). Lipinski's rule of 5 famously predicts that poor absorption is more likely when there are more than 5 hydrogen bond donors, 10 hydrogen bond acceptors, a molecular weight greater than 500 and a calculated LogP greater than 5.
 

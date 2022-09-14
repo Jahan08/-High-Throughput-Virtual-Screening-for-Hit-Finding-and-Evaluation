@@ -52,6 +52,8 @@ As well as using Maestro in this course, participants will learn how to submit j
 
 # Module 1.3 The Benefits of Screening Ultra-Large Libraries Transcript (Schoichet paper: https://www.nature.com/articles/s41586-019-0917-9)
 
+
+
 # Module 4.1d
 In this section, for ligand-based virtual screening, we profiled and filtered ~2 million compound subset of the Enamine REAL library.  (pre-run)
 

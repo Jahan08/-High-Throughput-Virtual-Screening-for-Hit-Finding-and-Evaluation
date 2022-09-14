@@ -105,6 +105,23 @@ Docking scores are analyzed together with the compound vector information
 
 And the data from the docked ligands are used to train and generate a ML model, which can then be used to rank all of the compounds in the entire 10 billion compound library. Evaluating the entire population takes around 1milisecond per ligand. This is much faster than docking with Glide, which can take around 30 seconds per ligand.
 
+Module 3 Target Validation for structure-based virtual screening
+
+In order to discern whether our target of interest can be used in a virtual screening campaign, we need to answer a series of questions, ranging from “is there an available structure of our target” through to “where are the druggable regions and/or potency handles within the binding site”. We can use a series of computational tools to help answer these questions and inform the preparation of our target prior to a virtual screen.
+
+The first thing we want to do is get an idea of the quality of our protein target. It’s a good idea to carefully read through the publication that goes alongside the PDB entry, as well as the entry itself, to get an idea of whether the protein was engineered or stabilized to aid expression or
+crystallization. After we have an idea of the target we might like to use for a virtual screen, we can get some more information about its quality by generating a Protein Reliability Report.
+
+
+  * Reviewing and Choosing a structure
+  * Protein Reliability Report metrices
+  * Preparing the structures with the protein preparation wizard
+  * Primex - PrimeX can be used to review the density and help make judgments about side-chain orientation, particularly where alternate positions are presented
+  * SiteMap - Explore the druggability of the binding site. SiteMap will identify pockets either with or without using a known ligand. The visual representation is split into hydrophobic yellow regions, and polar red and blue regions. A number of scores are also generated, and these can use used to assess whether the target’s binding pocket is worth exploring further. The Balance metric is a measure of whether a site has a good mixture of hydrophobic and polar regions for ligands to bind to, and the Volume of the pocket or binding site is a useful measure that allows us to identify if it will be able to accommodate ligands of a certain size.
+  * WaterMap - In structure-based drug discovery is the role of water. Often crystal structures contain water molecules, and as well as inspecting these carefully to identify if any particular water molecules involved in ligand binding for our target, WaterMap can help identify water molecules that could be expelled from a pocket on ligand binding.
+  
+  
+
 
 # Module 4.1d
 In this section, for ligand-based virtual screening, we profiled and filtered ~2 million compound subset of the Enamine REAL library.  (pre-run)

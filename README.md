@@ -36,4 +36,36 @@
 
 •	Target: A macromolecule (most commonly a protein) that will be targeted by a small molecule in a drug discovery project. Often the small molecule will cause some conformational change or lock the macromolecule into a particular conformation and thus affect that macromolecule's activity and downstream signaling pathways.
 
+# Module 4.1d
+In this section, for ligand-based virtual screening, we profiled and filtered ~2 million compound subset of the Enamine REAL library.  (pre-run)
+
+# Module 4.3
+For shape-based screening of a chemical library with GPU shape, we prepared the library and probe molecules. We select 10 probe(template to compare with) molecules from cognate ligands as well as the PLK1 DUD-E actives(118) we prepared earlier. We can use just one probe, but increasing the number and diversity probes generally improves performance, though this begins to saturate at around 10 molecules. We used the tools within Maestro to cluster these active PLK1 compounds and select 10 diverse probes to use in our Shape screen. 
+
+Each molecule in the screening deck(chemicals library) analyzed in the same way and compared with the profiles of each of the template or probe molecules. We have prepare the screening deck with creating shape data file tool of maestro.
+
+# Module 5.2
+
+Here we used Active Learning Glide (pre-run) in “evaluate” mode with our filtered Enamine REAL subset library (~2 million compounds). Evaluate mode allows us to use a pre -generated ML model to rank a large library to compounds, then choose the number (in this case we will use 5%, which will be prepared with LigPrep) of top-scoring compounds to dock to our validated 2OWB_dry_grid using Glide SP. 
+
+The ML model has been generated already, so we will be using Active Learning Glide in “evaluate” mode. This mode uses the pre-generated model to rank the entire library and then run Glide SP docking for a specified percentage of the top ranked compounds. 
+
+# Module 5.3
+
+In this section, we run GPU shape screening using 10 probe molecules and Enamine REAL subset library shape data file prepared in 4.3, to do that we used shape screening tool.
+
+# Module 6.1
+In this section, structure-based and ligand-based prospective screens we ran earlier have to be completed. 
+We here used DISE like selection of ordered compounds are often used to balance the tension between “best score” and “chemical diversity”. The premise is that a “novel” candidate compound is potentially more valuable than a “degenerate” candidate of roughly equal score. 
+
+Here we reduced the ~100,000 compounds to top scoring 1000 hits for both SBVS and LBVS
+
+Here our aim is to increase the structural diversity of the 1000 hits. To do that we used dise_select.py, first 100 compounds were used as seed and the compounds come after 100 comparing with fingerprint of seed compounds. and if a compound is considered distinct from the 100 seed compounds based on fingerprint similarity, it will be added to the output list until either 1000 compounds are kept or the input list is exhausted
+
+
+
+
+
+
+
 

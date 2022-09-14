@@ -70,10 +70,10 @@ The paper focuses on the Enamine REAL database, a collection with a vast number 
    
    ## Some issues or concern regarding screening large database
    
-    * Firstly, docking cannot accurately predict binding affinity and can result in many false positive hits
-    * There was also the concern that large compound libraries might overwhelm the active compounds with inactive or “decoy” compounds
-          -> A preliminary study was set up with this in mind, and set out to test how hit rates would vary as the library increased from tens of thousands to hundreds of millions of compounds. For a series of targets, known binders were docked along with property-matched decoys, and the authors looked at how the actives ranked as the decoy to active ratio increased. They expected the noise to overwhelm the signal, but this was not the case.
-          -> As the authors noted, the targets for which docking performed well with a high ligand to decoy ratio, perform better as the library size is increased. On the other hand, targets such as PUR2 where the docking performance with a higher ligand to decoy ratio was only ok with a lower library size, performed considerably worse as the library was increased. This suggests that models that work well would be expected to work even better as the library size increases, and not, as the authors feared “that inaccurate docking scores and a vast chemical space...conspire to overwhelm the true actives with docking decoys.”
+   * Firstly, docking cannot accurately predict binding affinity and can result in many false positive hits
+   * There was also the concern that large compound libraries might overwhelm the active compounds with inactive or “decoy” compounds
+       -> A preliminary study was set up with this in mind, and set out to test how hit rates would vary as the library increased from tens of thousands to hundreds of millions of compounds. For a series of targets, known binders were docked along with property-matched decoys, and the authors looked at how the actives ranked as the decoy to active ratio increased. They expected the noise to overwhelm the signal, but this was not the case.
+       -> As the authors noted, the targets for which docking performed well with a high ligand to decoy ratio, perform better as the library size is increased. On the other hand, targets such as PUR2 where the docking performance with a higher ligand to decoy ratio was only ok with a lower library size, performed considerably worse as the library was increased. This suggests that models that work well would be expected to work even better as the library size increases, and not, as the authors feared “that inaccurate docking scores and a vast chemical space...conspire to overwhelm the true actives with docking decoys.”
    
  * Screening Process : Authors docked the Enamine database, which at the time contained 99 million molecules, against AmpC, a beta lactamase enzyme. Starting with 99 million compounds, clustering the top 1 million (by staffold and topological similarity). Then, in order to identify only novel compounds, compounds which were similar to known AmpC inhibitors or that were similar to molecules that already existed in the in-stock compound library were excluded. 51 of the highest ranking compounds were selected for testing, of which 85% were successfully synthesized. Five of these 44 molecules showed inhibitory activity against the target, with Ki values ranging from 1.3 to 400 micromolar. 90 more high scoring analogues were chosen and synthesized. More than half of these were active and most so than the original hits. The authors note that the “the ability to optimize affinity by finding analogs within the library attests to its depth of coverage for many chemotypes. Finally, several of the high affinity compounds were co-crystallized with AmpC and encouragingly, the binding poses showed good agreement with docking pose predictions.
  
@@ -87,6 +87,24 @@ The paper focuses on the Enamine REAL database, a collection with a vast number 
     
     To do this, the authors developed what they called “hit-rate curves” that are a function of the docking score. They also established docking score ranges from which they would experimentally validate the hit rate. The 549 compounds that were chosen for synthesis were actually chosen such that they would cover 12 different ranges or tranches, as shown in the plot. While the analysis showed, as expected, high false-negative and false-positive rates, it also showed that for at least the D4 system, the binding was predicted quite well by docking score.
 A more general take away from this analysis is that hit rate can be expected to increase in regions of higher docking scores. This does level off near the very top, suggesting that it might make sense to impose a scoring function cutoff on the list of compounds to synthesize or purchase, but in the very top of the list, docking is not so good at differentiating between the high affinity compounds.
+
+# 2.2 Active Learning
+
+Active Learning technology offers a solution to this problem. Schrodingers Active Learning workflows train a machine learning (ML) model on physics-based data, such as Glide docking scores, iteratively sampled from a full library using our deep-learning powered QSAR platform, DeepChem/AutoQSAR.
+
+Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so.
+The 2D chemical structure of each molecule in a screening library is converted into a vector of numbers, in order for it to be included in the neural network. By docking only a fraction of the full library and using the scores to train a machine learning model, the entire library can be evaluated at a fraction of the speed. The top-ranked compounds predicted by the ML model can then undergo conventional virtual screening docking approaches.
+
+Say we want to dock a library of 10 Billion compounds - this is our complete dataset, and we only need a 2-dimensional representation of each compound in SMILES format to start this process.
+
+Depending on our complete library size, we then decide how many compounds we want to use to train the Machine learning model. The minimum here is 15 compounds, but the default is 100,000 compounds.
+
+The next step is to dock the selected subset of our library, so in our example let’s say we have chosen to dock 100,000 compounds from our 10 billion compound library.
+
+Docking scores are analyzed together with the compound vector information
+
+And the data from the docked ligands are used to train and generate a ML model, which can then be used to rank all of the compounds in the entire 10 billion compound library. Evaluating the entire population takes around 1milisecond per ligand. This is much faster than docking with Glide, which can take around 30 seconds per ligand.
+
 
 # Module 4.1d
 In this section, for ligand-based virtual screening, we profiled and filtered ~2 million compound subset of the Enamine REAL library.  (pre-run)

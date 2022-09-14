@@ -52,7 +52,8 @@ As well as using Maestro in this course, participants will learn how to submit j
 
 # Module 1.3 The Benefits of Screening Ultra-Large Libraries Transcript (Schoichet paper: https://www.nature.com/articles/s41586-019-0917-9)
 
-
+* Expanding Chemical Space : Getting new medicines to patients faster is the ultimate goal for drug discovery teams. Yet chemical space is vast, and only a tiny fraction of the billions of potentially pharmacologically active molecules are available to screen physically. Structure-based docking can screen virtual libraries of great size and diversity, enabling us to select only the best-fitting molecules for synthesis and testing.
+While physical compound collections typically include less than 20 million compounds......Recent advances, for example the advent of DNA encoded libraries, have extended the scale of screening libraries to the trillions. The GDB-17 (https://gdb.unibe.ch/downloads/), the so-called “chemical universe database” , covers all molecules with up to 17 atoms that contain C, N, O, S, and halogen atoms. This database contains over 166 billion compounds
 
 # Module 4.1d
 In this section, for ligand-based virtual screening, we profiled and filtered ~2 million compound subset of the Enamine REAL library.  (pre-run)

@@ -1,3 +1,16 @@
+# The Learning Objectives for the course are summarized below:
+
+* Understand the relevance of virtual screening and identify the benefits of screening very large ligand libraries
+* Recall and apply the virtual screening concepts, including docking, active learning, and shape screening
+* Recall and apply knowledge of target validation by preparing a target for structure-based virtual screening 
+* Recall and apply knowledge of library selection by preparing and filtering a ligand library for screening
+* Understand and demonstrate the importance of setting up, running and analyzing validation studies and then running perspective screens using active learning, docking, and shape screening tools
+* Understand and demonstrate methods of post-screening analysis, including; filtering, clustering, diversity enhancement, and comparison of scoring functions
+* Recall examples of methods that can be used after high-throughput virtual screening 
+* Complete a case study covering the HTVS process; assess various aspects of the screen, justify hit selection and submit absolute binding free energy perturbation predictions for chosen hits
+
+As well as using Maestro in this course, participants will learn how to submit jobs and run Schrödinger scripts via the command line. For a useful overview, see our Using the Command Line with the Schrödinger Platform guidance.
+
 # Module 1: Some terms to understand
 
 •	Absorption: The movement of a compound/drug from the site of administration to the bloodstream. This process involves several phases and depends upon the method of delivery (oral, topical, intravenous etc.). Lipinski's rule of 5 famously predicts that poor absorption is more likely when there are more than 5 hydrogen bond donors, 10 hydrogen bond acceptors, a molecular weight greater than 500 and a calculated LogP greater than 5.

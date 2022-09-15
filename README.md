@@ -148,6 +148,8 @@ We can run multiple different fragments in parallel to conduct a virtual screeni
 
 ### Note - Mixed-solvent MD is recommended where SiteMap Fails to generate desired score and this protocol can provide more details (sometimes SiteMap can outperform this protocol) about the potential and existing binding sites than SiteMap. But this process is more expensive than SiteMap.
 
+### find the binding site using PyMol : https://www.youtube.com/watch?v=49q1w0EuuhU
+
  * WaterMap - Often crystal structures contain water molecules, and as well as inspecting these carefully to identify if any particular water molecules involved in ligand binding for our target, WaterMap can help identify water molecules that could be expelled from a pocket on ligand binding.
 
 WaterMap is different from sitemap and MxMD in that it is used to determine hydration-site thermodynamics. 

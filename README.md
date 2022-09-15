@@ -133,6 +133,8 @@ crystallization. After we have an idea of the target we might like to use for a 
  
  * Protein reliability report to see how structure change during preparation
  
+ ### Note - sometimes protein reliability report results appear to be worse after protein preparation. Inspect the elements that are “worse” and decide if these are of genuine concern or not. E.g. if steric clashes have increased, assess whether these clashes are from crystal mates (toggle on Show crystal mates in the Protein Reliability Report panel). Neighboring crystals of the same protein are often not biologically relevant.
+ 
  * SiteMap - Explore the druggability of the binding site. SiteMap will identify pockets either with or without using a known ligand. The visual representation is split into hydrophobic yellow regions, and red hydrogen bond acceptor and blue hydrogen bond donor regions and metal binding regions colored pink. A number of scores are also generated, and these can be used to assess whether the target’s binding pocket is worth exploring further. The Balance metric is a measure of whether a site has a good mixture of hydrophobic and polar regions for ligands to bind to, and the Volume of the pocket or binding site is a useful measure that allows us to identify if it will be able to accommodate ligands of a certain size.
 
 ### Note : Before analyzing the prepared protein structure we are going to remove all the water molecules. Sitemap generate hydrophobic and hydrophylic contour map

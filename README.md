@@ -137,7 +137,11 @@ crystallization. After we have an idea of the target we might like to use for a 
  
  * SiteMap - Explore the druggability of the binding site. SiteMap will identify pockets either with or without using a known ligand. The visual representation is split into hydrophobic yellow regions, and red hydrogen bond acceptor and blue hydrogen bond donor regions and metal binding regions colored pink. A number of scores are also generated, and these can be used to assess whether the target’s binding pocket is worth exploring further. The Balance metric is a measure of whether a site has a good mixture of hydrophobic and polar regions for ligands to bind to, and the Volume of the pocket or binding site is a useful measure that allows us to identify if it will be able to accommodate ligands of a certain size.
 
-### Note : Before analyzing the prepared protein structure we are going to remove all the water molecules. Sitemap generate hydrophobic and hydrophylic contour map
+### Note : Before analyzing the prepared protein structure we are going to remove all the water molecules. Sitemap generate hydrophobic and hydrophylic contour map. When analyzing SiteMap results, it is recommended to look for a SiteScore and DScore > 1, a balance > 0.3 and a volume > 225
+
+### For more - https://www.schrodinger.com/sites/default/files/s3/mkt/Documentation/2021-1/docs/Documentation.htm#sitemap_user_manual/sitemap_intro_overview.htm
+
+### For more https://www.schrodinger.com/sites/default/files/s3/mkt/Documentation/2021-1/docs/Documentation.htm#sitemap_user_manual/sitemap_methodology_evaluate_sites.htm%3FTocPath%3DUser%2520Manuals%7CSiteMap%2520User%2520Manual%7CHow%2520SiteMap%2520Works%7C_____3
  
  * Mixed-Solvent MD - This protocol simulates the target of interest (GPCR, kinase, ion channel, etc.) in a solution of water and a co-solvent, like benzene or any other fragment-like molecule. During the simulation, the co-solvent molecules interact with the surface of the protein, revealing binding hotspots. These hotspots have been proven to correlate very well with actual pockets. Furthermore, binding modes for the probes can be extracted, which can prove very valuable, as the binding mode of bigger, drug-like molecules could mirror that of the probe.
 We can run multiple different fragments in parallel to conduct a virtual screening campaign.

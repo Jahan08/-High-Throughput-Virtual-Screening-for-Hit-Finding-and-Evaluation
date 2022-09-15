@@ -176,6 +176,13 @@ Let’s start by profiling and filtering the PLK1 DUD-E library. This library co
 
 ### Note - to know more background information (see uploaded file Module_4_Background_Required_Reading.pdf)
 
+# Module 4.1a Library Profiling and Filtering
+
+We have prepared DUD-E ligand library for PLK1 kinase, which is a csv file with SMILE string, CHEMBL ID, Biological Activity Data. Next step is to profile the ligand library by analysing the properties i.e. HBA, HBD, MW, AlogP, PSA from the SMILES string and CHEMBL ID. By plotting the ligands (Druglike, leadlike, Near-drug like, Fragment, non-druglike) we can know a little more about the properties of the ligands in our library. let’s filter the library to remove the Non-Druglike and fragment compounds. We now have a filtered .csv file (PLK1_DUDE_screen_filtered.csv) containing 5782 compounds that we will prepare using LigPrep
+
+# Module 4.1b Ligand preparation
+
+
 # Module 4.3
 For shape-based screening of a chemical library with GPU shape, we prepared the library and probe molecules. We select 10 probe(template to compare with) molecules from cognate ligands as well as the PLK1 DUD-E actives(118) we prepared earlier. We can use just one probe, but increasing the number and diversity probes generally improves performance, though this begins to saturate at around 10 molecules. We used the tools within Maestro to cluster these active PLK1 compounds and select 10 diverse probes to use in our Shape screen. 
 

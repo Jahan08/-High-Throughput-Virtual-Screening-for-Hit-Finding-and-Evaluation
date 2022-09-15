@@ -182,6 +182,9 @@ We have prepared DUD-E ligand library for PLK1 kinase, which is a csv file with 
 
 # Module 4.1b Ligand preparation
 
+We used Maestro (LigPrep) to prepare filtered file.
+
+### Note Ligand should be prepared at the same pH as the proteins were prepared. 
 
 # Module 4.3
 For shape-based screening of a chemical library with GPU shape, we prepared the library and probe molecules. We select 10 probe(template to compare with) molecules from cognate ligands as well as the PLK1 DUD-E actives(118) we prepared earlier. We can use just one probe, but increasing the number and diversity probes generally improves performance, though this begins to saturate at around 10 molecules. We used the tools within Maestro to cluster these active PLK1 compounds and select 10 diverse probes to use in our Shape screen. 

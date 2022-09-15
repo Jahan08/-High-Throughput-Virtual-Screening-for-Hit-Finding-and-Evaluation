@@ -138,6 +138,9 @@ Similarly, depending on the net charge and the location of protons, some residue
 ## NOTE: Before working with sitemap it is important to remove all the water molecules
  
  * WaterMap - In structure-based drug discovery is the role of water. Often crystal structures contain water molecules, and as well as inspecting these carefully to identify if any particular water molecules involved in ligand binding for our target, WaterMap can help identify water molecules that could be expelled from a pocket on ligand binding.
+ 
+ 
+# Module 3 Assignment (see the uploaded file)
 
 # Module 4.1d
 In this section, for ligand-based virtual screening, we profiled and filtered ~2 million compound subset of the Enamine REAL library.  (pre-run)

@@ -154,7 +154,7 @@ Apo WaterMap job: Protein without the Ligand. WaterMap uses the location of the 
 
 Holo WaterMap Job: Protein with Ligand
 
-## Result analysis - red spheres very energy hydration sites, meaning they are highly unstable and The apo WaterMap shows a cluster of high-energy hydration sites in the binding site region that are highly unstable. In the holo WaterMap almost all those high-energy waters have been displaced by the ligand. This implies that a drug-sized molecule (that can be accommodated in this binding site), will receive significant binding affinity from simply occupying the binding site, thus confirming the target’s druggability.
+### Result analysis - red spheres very energy hydration sites, meaning they are highly unstable and The apo WaterMap shows a cluster of high-energy hydration sites in the binding site region that are highly unstable. In the holo WaterMap almost all those high-energy waters have been displaced by the ligand. This implies that a drug-sized molecule (that can be accommodated in this binding site), will receive significant binding affinity from simply occupying the binding site, thus confirming the target’s druggability.
 
 # Module 4.1d
 In this section, for ligand-based virtual screening, we profiled and filtered ~2 million compound subset of the Enamine REAL library.  (pre-run)

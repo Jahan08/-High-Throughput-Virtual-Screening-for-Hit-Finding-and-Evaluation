@@ -133,7 +133,6 @@ crystallization. After we have an idea of the target we might like to use for a 
  
  * Protein reliability report to see how structure change during preparation
  
- 
  * SiteMap - Explore the druggability of the binding site. SiteMap will identify pockets either with or without using a known ligand. The visual representation is split into hydrophobic yellow regions, and red hydrogen bond acceptor and blue hydrogen bond donor regions and metal binding regions colored pink. A number of scores are also generated, and these can be used to assess whether the target’s binding pocket is worth exploring further. The Balance metric is a measure of whether a site has a good mixture of hydrophobic and polar regions for ligands to bind to, and the Volume of the pocket or binding site is a useful measure that allows us to identify if it will be able to accommodate ligands of a certain size.
 
 ## Note : Before analyzing the prepared protein structure we are going to remove all the water molecules. Sitemap generate hydrophobic and hydrophylic contour map
@@ -144,6 +143,18 @@ We can run multiple different fragments in parallel to conduct a virtual screeni
 ## Note - Mixed-solvent MD is recommended where SiteMap Fails to generate desired score and this protocol can provide more details (sometimes SiteMap can outperform this protocol) about the potential and existing binding sites than SiteMap. But this process is more expensive than SiteMap.
 
  * WaterMap - Often crystal structures contain water molecules, and as well as inspecting these carefully to identify if any particular water molecules involved in ligand binding for our target, WaterMap can help identify water molecules that could be expelled from a pocket on ligand binding.
+
+WaterMap is different from sitemap and MxMD in that it is used to determine hydration-site thermodynamics. 
+
+## Note - The preparation of a system is extremely important prior to performing a WaterMap calculation and can have a profound influence on the quality of results that emerge from it. Any unusual residue charges or incorrectly flipped residues can drastically alter the hydration structure seen in the final WaterMap
+
+It is a best practice to always run WaterMap on both the apo- and holo-structures. If there are any apo hydration sites that have the same or higher ΔG in the holo map, those sites should be considered as targets for displacement. Additionally, drug design efforts should focus on displacing hydration sites that have high TΔS (entropy), but low ΔH (enthalpy).
+
+Apo WaterMap job: Protein without the Ligand. WaterMap uses the location of the ligand to identify the binding site and calculates the thermodynamics for the water molecules in this region
+
+Holo WaterMap Job: Protein with Ligand
+
+## Result analysis - red spheres very energy hydration sites, meaning they are highly unstable and The apo WaterMap shows a cluster of high-energy hydration sites in the binding site region that are highly unstable. In the holo WaterMap almost all those high-energy waters have been displaced by the ligand. This implies that a drug-sized molecule (that can be accommodated in this binding site), will receive significant binding affinity from simply occupying the binding site, thus confirming the target’s druggability.
 
 # Module 4.1d
 In this section, for ligand-based virtual screening, we profiled and filtered ~2 million compound subset of the Enamine REAL library.  (pre-run)

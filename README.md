@@ -138,7 +138,11 @@ crystallization. After we have an idea of the target we might like to use for a 
 
 ## Note : Before analyzing the prepared protein structure we are going to remove all the water molecules. Sitemap generate hydrophobic and hydrophylic contour map
  
- 
+ * Mixed-Solvent MD - This protocol simulates the target of interest (GPCR, kinase, ion channel, etc.) in a solution of water and a co-solvent, like benzene or any other fragment-like molecule. During the simulation, the co-solvent molecules interact with the surface of the protein, revealing binding hotspots. These hotspots have been proven to correlate very well with actual pockets. Furthermore, binding modes for the probes can be extracted, which can prove very valuable, as the binding mode of bigger, drug-like molecules could mirror that of the probe.
+We can run multiple different fragments in parallel to conduct a virtual screening campaign.
+
+## Note - Mixed-solvent MD is recommended where SiteMap Fails to generate desired score and this protocol can provide more details about the potential and existing binding sites than SiteMap. But this process is more expensive than SiteMap.
+
  * WaterMap - Often crystal structures contain water molecules, and as well as inspecting these carefully to identify if any particular water molecules involved in ligand binding for our target, WaterMap can help identify water molecules that could be expelled from a pocket on ligand binding.
 
 # Module 4.1d

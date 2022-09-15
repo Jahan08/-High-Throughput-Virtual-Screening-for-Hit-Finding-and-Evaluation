@@ -172,17 +172,24 @@ Holo WaterMap Job: Protein with Ligand
 
 In the Module 3 assignment, we prepared and validated two PLK1 structures (2OWB and 2RKU). In this module, we are going to prepare ligand libraries, some of which contain compounds that are known PLK1 binders.
 
-Let’s start by profiling and filtering the PLK1 DUD-E library. This library contains a mixture of known actives and decoys and will be used as part of our validation study to assess whether our targets can identify known binders effectively. In this section, for ligand-based virtual screening, we profiled and filtered ~2 million compound subset of the Enamine REAL library.  (pre-run)
+Let’s start by profiling and filtering the PLK1 DUD-E library. This library contains a mixture of known actives and decoys and will be used as part of our validation study to assess whether our targets can identify known binders effectively. 
 
 ### Note - to know more background information (see uploaded file Module_4_Background_Required_Reading.pdf)
 
-# Module 4.1a Library Profiling and Filtering
+## Module 4.1a DUD-E (decoys) Library Profiling and Filtering
 
 We have prepared DUD-E ligand library for PLK1 kinase, which is a csv file with SMILE string, CHEMBL ID, Biological Activity Data. Next step is to profile the ligand library by analysing the properties i.e. HBA, HBD, MW, AlogP, PSA from the SMILES string and CHEMBL ID. By plotting the ligands (Druglike, leadlike, Near-drug like, Fragment, non-druglike) we can know a little more about the properties of the ligands in our library. let’s filter the library to remove the Non-Druglike and fragment compounds. We now have a filtered .csv file (PLK1_DUDE_screen_filtered.csv) containing 5782 compounds that we will prepare using LigPrep
 
-# Module 4.1b Ligand preparation
-
+## Module 4.1b Decoys Ligand library preparation
 We used Maestro (LigPrep) to prepare filtered file.
+
+## Module 4.1c Cognate or co-crystallized Ligand preparation
+We used Maestro (LigPrep) to prepare cognate ligands.
+
+## Module 4.1d Enamine REAL Ligand library filtering and preparation
+In this section, for ligand-based virtual screening, we profiled and filtered ~2 million compound subset of the Enamine REAL library. This subset of just over 2 million compounds was created by Schrödinger scientists for use in this course. The full Enamine REAL library comprises over 1.95 billion compounds, so in the interest of time and compute resources, we screened a random subset of the full library.
+
+Enamine REAL ~2M compounds library contains SMILES String and compund ID (ZINC ID) then profiling and filetring were condusted as like as for the DUD-E library. After filtering we got 1875200 compounds.
 
 ### Note Ligand should be prepared at the same pH as the proteins were prepared. 
 

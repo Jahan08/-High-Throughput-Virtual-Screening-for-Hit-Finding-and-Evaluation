@@ -168,8 +168,11 @@ Holo WaterMap Job: Protein with Ligand
 
 ### Note - Protein can contain multiple chains, so WaterMap and SiteMap analysis must be conducted on multiple chains separately 
 
-# Module 4.1d
-In this section, for ligand-based virtual screening, we profiled and filtered ~2 million compound subset of the Enamine REAL library.  (pre-run)
+# Module 4.1
+
+In the Module 3 assignment, we prepared and validated two PLK1 structures (2OWB and 2RKU). In this module, we are going to prepare ligand libraries, some of which contain compounds that are known PLK1 binders.
+
+Let’s start by profiling and filtering the PLK1 DUD-E library. This library contains a mixture of known actives and decoys and will be used as part of our validation study to assess whether our targets can identify known binders effectively. In this section, for ligand-based virtual screening, we profiled and filtered ~2 million compound subset of the Enamine REAL library.  (pre-run)
 
 # Module 4.3
 For shape-based screening of a chemical library with GPU shape, we prepared the library and probe molecules. We select 10 probe(template to compare with) molecules from cognate ligands as well as the PLK1 DUD-E actives(118) we prepared earlier. We can use just one probe, but increasing the number and diversity probes generally improves performance, though this begins to saturate at around 10 molecules. We used the tools within Maestro to cluster these active PLK1 compounds and select 10 diverse probes to use in our Shape screen. 

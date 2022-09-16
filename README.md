@@ -203,8 +203,6 @@ Enamine REAL ~2M compounds library contains SMILES String and compund ID (ZINC I
 # Module 4.3
 For shape-based screening of a chemical library with GPU shape, we prepared the library and probe molecules. We select 10 probe(template to compare with) molecules from cognate ligands as well as the PLK1 DUD-E actives(118) we prepared earlier. We can use just one probe, but increasing the number and diversity probes generally improves performance, though this begins to saturate at around 10 molecules. We used the tools within Maestro to cluster these active PLK1 compounds and select 10 diverse probes to use in our Shape screen. 
 
-Visit DUD-e library, this library contains library of actives and decoy for PLK1 (which ca be prepared with LigPrep)
-
 * Selecting Template (probe) molecules for the screen
 
 The first step in executing a Shape screen of a chemical library is to construct a shape-based model of known small-molecule binders. Each molecule in the screening deck will be analyzed in the same way and compared with the profiles of each of the template or probe molecules. The ability of Shape to recover true actives is influenced by the diversity and number of probes. We can use just one probe, but increasing the number and diversity probes generally improves performance, though this begins to saturate at around 10 molecules. We will use the two PLK1 (2OWB and 2RKU) cognate ligands that we prepared using LigPrep previously, and we additionally used the known 118 actives from the filtered and LigPrepped PLK1 DUD-E library. We used the tools within Maestro to cluster these active PLK1 compounds and select 10 diverse probes to use in our Shape screen.
@@ -226,10 +224,20 @@ The first step in executing a Shape screen of a chemical library is to construct
  ### for more : https://www.schrodinger.com//sites/default/files/s3/mkt/Documentation/2021-1/docs/Documentation.htm#maestro_tools_help/canvas_cluster.html?
 
 # Module 5.1a Docking Validation with Cognate Ligands
+
+The first part of our docking validation study is to assess how well Glide can reproduce the known cognate ligand binding poses.
+
 # Module 5.1b Docking validation with DUD-E Library
 
+In this tutorial, we built on the methods used in the previous tutorial and use Glide to to dock the filtered PLK1 DUD-E ligand library, both with and without grid-based constraints, for each of the 2OWB and 2RKU receptor grids. Docking validation studies such as this were used to further assess if our structures and docking methodology can demonstrate enrichment of known active compounds over decoys.
 
-# Module 5.2 Evaluating a Large Ligand Library with ACtive Learning Glide
+* Step 1 DUD-E Filtered Ligand Docking with and without Constraints (Receptor based virtual screening -> Ligand Docking )
+* Step 2 Calculation Enrichment : The first step in enrichment calculation is creating a file containing only the known actives. Our filtered DUD-E library contained a total of 5782 compounds, 118 of which were known actives. We will use the PLK1_DUDE_screen_filtered.csv file that we created in Module 4 to create a file containing only active compounds.
+
+
+
+
+# Module 5.2 Evaluating a Large Ligand Library with Active Learning Glide
 
 Here we used Active Learning Glide (pre-run) in “evaluate” mode with our filtered Enamine REAL subset library (~2 million compounds). Evaluate mode allows us to use a pre -generated ML model to rank a large library to compounds, then choose the number (in this case we will use 5%, which will be prepared with LigPrep) of top-scoring compounds to dock to our validated 2OWB_dry_grid using Glide SP. 
 

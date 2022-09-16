@@ -193,11 +193,11 @@ Enamine REAL ~2M compounds library contains SMILES String and compund ID (ZINC I
 
 ### Note Ligand should be prepared at the same pH as the proteins were prepared. 
 
-## Module 4.2 Receptor Grid generation
+# Module 4.2 Receptor Grid generation
 
-### Step 1 Identifying interacting waters : kept the water molecules which interact with ligands and also facilitate the interaction between ligand and protein residue/s
+* Step 1 Identifying interacting waters : kept the water molecules which interact with ligands and also facilitate the interaction between ligand and protein residue/s
 
-### Step 2 Grid Generation : We have created 3 recpetor grids for 2OWB (4 waters, 1 water and dry) and another 3 receptor grids for 2RKU (3 waters, 1 water and dry). The grids have optional positional and hydrogen bonding constraints that we can choose to use in docking studies. It is good practice to create a number of grids for prepared structure, particularly if there is water in the binding pocket, in order to assess whether this helps or hinders docking.
+* Step 2 Grid Generation : We have created 3 recpetor grids for 2OWB (4 waters, 1 water and dry) and another 3 receptor grids for 2RKU (3 waters, 1 water and dry). The grids have optional positional and hydrogen bonding constraints that we can choose to use in docking studies. It is good practice to create a number of grids for prepared structure, particularly if there is water in the binding pocket, in order to assess whether this helps or hinders docking.
 
 
 # Module 4.3

@@ -234,7 +234,7 @@ In this tutorial, we built on the methods used in the previous tutorial and use 
 * Step 1 DUD-E Filtered Ligand Docking with and without Constraints (Receptor based virtual screening -> Ligand Docking )
 * Step 2 Calculation Enrichment : The first step in enrichment calculation is creating a file containing only the known actives. Our filtered DUD-E library contained a total of 5782 compounds, 118 of which were known actives. We will use the PLK1_DUDE_screen_filtered.csv file that we created in Module 4 to create a file containing only active compounds.
 
-
+This step can show the efficiency of the receptor grids during docking to screen the actives compounds from the mixture of actives and decoys
 
 
 # Module 5.2 Evaluating a Large Ligand Library with Active Learning Glide

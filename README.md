@@ -246,7 +246,7 @@ The ML model has been generated already, so we will be using Active Learning Gli
 
 # Module 5.3 Ligand Based Virtual Screening with GPU shape
 
-In this section, we run GPU shape screening using 10 probe molecules and Enamine REAL subset library shape data file prepared in 4.3, to do that we used shape screening tool.
+we have run a GPU Shape screen. In Module 4.3, the 2OWB and 2RKU cognate ligands, as well as the active ligands from the filtered PLK1 DUD-E library, were clustered to create a representative yet diverse set of 10 probes. These were used to screen to large ligand library, our enamine 2M PLK1 filtered subset, that had been filtered using the Library Analysis workflow, and prepared using the Create Shape Data File workflow
 
 # Module 6.1 DISE-Like Selection of SBVS and LBVS Hits
 In this section, structure-based and ligand-based prospective screens we ran earlier have to be completed. 

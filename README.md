@@ -236,6 +236,7 @@ In this tutorial, we built on the methods used in the previous tutorial and use 
 
 This step can show the efficiency of the receptor grids during docking to screen the actives compounds from the mixture of actives and decoys
 
+# Module 5.1 Assignment (uploaded)
 
 # Module 5.2 Evaluating a Large Ligand Library with Active Learning Glide
 

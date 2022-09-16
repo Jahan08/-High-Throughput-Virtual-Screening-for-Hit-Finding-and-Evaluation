@@ -195,15 +195,35 @@ Enamine REAL ~2M compounds library contains SMILES String and compund ID (ZINC I
 
 ## Module 4.2 Receptor Grid generation
 
-### Step 1 Identifying interacting waters
+### Step 1 Identifying interacting waters : kept the water molecules which interact with ligands and also facilitate the interaction between ligand and protein residue/s
 
-### Step 2 Grid Generation
+### Step 2 Grid Generation : We have created 3 recpetor grids for 2OWB (4 waters, 1 water and dry) and another 3 receptor grids for 2RKU (3 waters, 1 water and dry). The grids have optional positional and hydrogen bonding constraints that we can choose to use in docking studies. It is good practice to create a number of grids for prepared structure, particularly if there is water in the binding pocket, in order to assess whether this helps or hinders docking.
 
 
 # Module 4.3
 For shape-based screening of a chemical library with GPU shape, we prepared the library and probe molecules. We select 10 probe(template to compare with) molecules from cognate ligands as well as the PLK1 DUD-E actives(118) we prepared earlier. We can use just one probe, but increasing the number and diversity probes generally improves performance, though this begins to saturate at around 10 molecules. We used the tools within Maestro to cluster these active PLK1 compounds and select 10 diverse probes to use in our Shape screen. 
 
-Each molecule in the screening deck(chemicals library) analyzed in the same way and compared with the profiles of each of the template or probe molecules. We have prepare the screening deck with creating shape data file tool of maestro.
+Visit DUD-e library, this library contains library of actives and decoy for PLK1 (which ca be prepared with LigPrep)
+
+* Selecting Template (probe) molecules for the screen
+
+The first step in executing a Shape screen of a chemical library is to construct a shape-based model of known small-molecule binders. Each molecule in the screening deck will be analyzed in the same way and compared with the profiles of each of the template or probe molecules. The ability of Shape to recover true actives is influenced by the diversity and number of probes. We can use just one probe, but increasing the number and diversity probes generally improves performance, though this begins to saturate at around 10 molecules. We will use the two PLK1 (2OWB and 2RKU) cognate ligands that we prepared using LigPrep previously, and we additionally used the known 118 actives from the filtered and LigPrepped PLK1 DUD-E library. We used the tools within Maestro to cluster these active PLK1 compounds and select 10 diverse probes to use in our Shape screen.
+
+ * Ligand alignment
+ 
+ * Conduct Ligand-based Virtual Screening to create probe or template molecules
+ 
+ Fingerprint Similarity -> Fingerprint -> (Radial, For Atom Typing Scheme, choose 4. Atoms distinguished by functional type: {H}, {C}, {F,Cl}, {Br,I}, {N,O}, {S}, {other}; bonds by hybridization) -> Similarity (Tanimoto) -> cluster (10 clusters based on fingerprint similarity)
+ 
+ Fingerprint : Molecular fingerprints are a way of encoding the structure of a molecule. The most common type of fingerprint is a series of binary digits (bits) that represent the presence or absence of particular substructures in the molecule. Comparing fingerprints allows you to determine the similarity between two molecules, to find matches to a query substructure, etc.
+ 
+ Tanimoto : Two fingerprints are most commonly compared with the Tanimoto similarity metric (taking a value between 0 and 1, with 1 corresponding to identical fingerprints
+ 
+ * Preparing a screening deck for shape
+ 
+ We screened a subset of the enamine REAL library containing ~2M compounds. We already have filtered Enamine REAL library (convert .csv to .sim filetype). To screen them we conducted Shape Screening (Ligand-based virtual screening). we used Typed Pharmacophore is the recommended shape type and requires that a shape from a probe molecule will only match a ligand from the screening deck when the two spheres have matching pharmacophore types.
+ 
+ ### for more : https://www.schrodinger.com//sites/default/files/s3/mkt/Documentation/2021-1/docs/Documentation.htm#maestro_tools_help/canvas_cluster.html?
 
 # Module 5.2
 

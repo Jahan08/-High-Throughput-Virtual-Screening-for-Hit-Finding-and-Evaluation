@@ -249,12 +249,15 @@ The ML model has been generated already, so we will be using Active Learning Gli
 we have run a GPU Shape screen. In Module 4.3, the 2OWB and 2RKU cognate ligands, as well as the active ligands from the filtered PLK1 DUD-E library, were clustered to create a representative yet diverse set of 10 probes. These were used to screen to large ligand library, our enamine 2M PLK1 filtered subset, that had been filtered using the Library Analysis workflow, and prepared using the Create Shape Data File workflow
 
 # Module 6.1 DISE-Like Selection of SBVS and LBVS Hits
+
+* DISE: DIrected Sphere Exclusion (DISE)-like selection of ordered compounds is often used as a post-screening analysis tool. 2003 paper from Anadys Pharmaceuticals describes “Directed Sphere Exclusion (DISE), a modification of the Sphere Exclusion algorithm, which retains all positive properties of the Sphere Exclusion algorithm but generates a more even distribution of the selected compounds in the chemical space. In addition, the computational requirement is significantly reduced, thus it can be applied to very large data sets.
+
 In this section, structure-based and ligand-based prospective screens we ran earlier have to be completed. 
 We here used DISE like selection of ordered compounds are often used to balance the tension between “best score” and “chemical diversity”. The premise is that a “novel” candidate compound is potentially more valuable than a “degenerate” candidate of roughly equal score. 
 
 Here we reduced the ~100,000 compounds to top scoring 1000 hits for both SBVS and LBVS
 
-Here our aim is to increase the structural diversity of the 1000 hits. To do that we used dise_select.py, first 100 compounds were used as seed and the compounds come after 100 comparing with fingerprint of seed compounds. and if a compound is considered distinct from the 100 seed compounds based on fingerprint similarity, it will be added to the output list until either 1000 compounds are kept or the input list is exhausted
+Here our aim is to increase the structural diversity of the 1000 hits. To do that we used dise_select.py, first 100 compounds were used as seed and the compounds come after 100 comparing with fingerprint of seed compounds. and if a compound is considered distinct from the 100 seed compounds based on fingerprint similarity, it will be added to the output list until either 1000 compounds are kept or the input list is exhausted.
 
 # Module 6.2a Inspection, Clustering and Strain Rescoring of SBVS Results
 # Module 6.2b Inspection, Clustering and Strain Rescoring of LBVS Results

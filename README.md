@@ -225,23 +225,33 @@ The first step in executing a Shape screen of a chemical library is to construct
  
  ### for more : https://www.schrodinger.com//sites/default/files/s3/mkt/Documentation/2021-1/docs/Documentation.htm#maestro_tools_help/canvas_cluster.html?
 
-# Module 5.2
+# Module 5.1a Docking Validation with Cognate Ligands
+# Module 5.1b Docking validation with DUD-E Library
+
+
+# Module 5.2 Evaluating a Large Ligand Library with ACtive Learning Glide
 
 Here we used Active Learning Glide (pre-run) in “evaluate” mode with our filtered Enamine REAL subset library (~2 million compounds). Evaluate mode allows us to use a pre -generated ML model to rank a large library to compounds, then choose the number (in this case we will use 5%, which will be prepared with LigPrep) of top-scoring compounds to dock to our validated 2OWB_dry_grid using Glide SP. 
 
 The ML model has been generated already, so we will be using Active Learning Glide in “evaluate” mode. This mode uses the pre-generated model to rank the entire library and then run Glide SP docking for a specified percentage of the top ranked compounds. 
 
-# Module 5.3
+# Module 5.3 Ligand Based Virtual Screening with GPU shape
 
 In this section, we run GPU shape screening using 10 probe molecules and Enamine REAL subset library shape data file prepared in 4.3, to do that we used shape screening tool.
 
-# Module 6.1
+# Module 6.1 DISE-Like Selection of SBVS and LBVS Hits
 In this section, structure-based and ligand-based prospective screens we ran earlier have to be completed. 
 We here used DISE like selection of ordered compounds are often used to balance the tension between “best score” and “chemical diversity”. The premise is that a “novel” candidate compound is potentially more valuable than a “degenerate” candidate of roughly equal score. 
 
 Here we reduced the ~100,000 compounds to top scoring 1000 hits for both SBVS and LBVS
 
 Here our aim is to increase the structural diversity of the 1000 hits. To do that we used dise_select.py, first 100 compounds were used as seed and the compounds come after 100 comparing with fingerprint of seed compounds. and if a compound is considered distinct from the 100 seed compounds based on fingerprint similarity, it will be added to the output list until either 1000 compounds are kept or the input list is exhausted
+
+# Module 6.2a Inspection, Clustering and Strain Rescoring of SBVS Results
+# Module 6.2b Inspection, Clustering and Strain Rescoring of LBVS Results
+# Module 6.3 Rank Comparison and Consensus Scoring 
+# Module 7.1 Methods for further Evaluating and Enriching Hits
+# Module 8 AmpC Case Study
 
 
 

@@ -260,7 +260,14 @@ Here we reduced the ~100,000 compounds to top scoring 1000 hits for both SBVS an
 Here our aim is to increase the structural diversity of the 1000 hits. To do that we used dise_select.py, first 100 compounds were used as seed and the compounds come after 100 comparing with fingerprint of seed compounds. and if a compound is considered distinct from the 100 seed compounds based on fingerprint similarity, it will be added to the output list until either 1000 compounds are kept or the input list is exhausted.
 
 # Module 6.2a Inspection, Clustering and Strain Rescoring of SBVS Results
+
+we inspected the DISE-like selection structure files created in the Module 6.1 tutorial from the Active Learning Glide (structure-based) prospective screen. We assessed the diversity and then clustered the compounds to reduce the number of hits, then we re-scored these compounds by running a strain energy calculation in order to identify the best hits to take forward for more in-depth analyses. From the analysis from this step we got 200 representative hits (similarity threshold 0.6, 0.3, 0.145). We ranked these hits groups based on their strain docking score.
+
 # Module 6.2b Inspection, Clustering and Strain Rescoring of LBVS Results
+
+we have inspected the Shape Screen (ligand-based) results that were filtered for diversity using the DISE-like selection script. We inspected the results of groups of 1000 compounds with varying levels of diversity. The compounds were then clustered to create a list of 200. representative compounds for each group. Each group of 200 compounds was additionally assessed in terms of strain energy in order to identify the best hits to take forward for more in-depth analyses.
+
+
 # Module 6.3 Rank Comparison and Consensus Scoring 
 # Module 7.1 Methods for further Evaluating and Enriching Hits
 # Module 8 AmpC Case Study

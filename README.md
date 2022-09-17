@@ -325,7 +325,7 @@ Molecular dynamics based FEP methods can be used to predict binding free energie
 
 Assignment files are uploaded.
 
-
+We also conduct similar FEP+ simulation for PLK1 (2OWB) see the uploaded files and videos
 
 
 

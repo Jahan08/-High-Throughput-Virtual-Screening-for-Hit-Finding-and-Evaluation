@@ -321,9 +321,9 @@ Molecular dynamics based FEP methods can be used to predict binding free energie
 * Computing these Free Energies reliably would make drug design (and much more chemistry) a lot easier
  
  
-
- 
 # Module 8 AmpC Case Study
+
+Assignment files are uploaded.
 
 
 

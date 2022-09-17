@@ -267,9 +267,62 @@ we inspected the DISE-like selection structure files created in the Module 6.1 t
 
 we have inspected the Shape Screen (ligand-based) results that were filtered for diversity using the DISE-like selection script. We inspected the results of groups of 1000 compounds with varying levels of diversity. The compounds were then clustered to create a list of 200. representative compounds for each group. Each group of 200 compounds was additionally assessed in terms of strain energy in order to identify the best hits to take forward for more in-depth analyses.
 
-
 # Module 6.3 Rank Comparison and Consensus Scoring 
+
 # Module 7.1 Methods for further Evaluating and Enriching Hits
+
+ we looked at some of the computational techniques that can be used after virtual screening in order to further enrich the results and create more reliable purchase lists for chemical synthesis and biological screening.
+ 
+ ## Prospective screening complete, what next?
+ 
+● Advanced docking methods:
+● Glide with constraints, Glide XP
+● Induced Fit Docking (IFD)
+● Covalent docking with CovDock
+● Enumeration tools and automated docking with Ligand Designer
+
+● Molecular Dynamics (MD) and free energy methods:
+● MD, IFD-MD
+● MM-GBSA
+
+The molecular mechanics with generalized Born and surface area (MM-GBSA) scoring function has been optimized to predict binding free energies (reported in kcal/mol) for a congeneric series of molecules and is, therefore, a commonly used follow-up to Glide docking. The absolute values calculated do normally agree fully with experimental binding affinities. However, the ranking of the ligands based on the calculated binding energies (MM-GBSA dG Bind) can be expected to agree reasonably well with ranking based on experimental binding affinity, particularly in the case of congeneric series. As the MM-GBSA binding energies are approximate free energies of binding, a more negative value indicates stronger binding.
+
+● WScore, WaterMap
+● Relative Binding FEP+, Absolute Binding FEP+
+
+Relative binding FEP can be described as computational alchemy, and involves transmuting one set of atoms into another (for example converting one ligand into another) in a series of steps where the potential energy and interactions for one ligand are scaled down while they are scaled up for the other ligand. This approach is particularly useful when experimental binding affinities are known for one or more ligands,
+The absolute binding free energy is calculated from absolute binding FEP+ simulations in which the ligand is annihilated in the protein-ligand complex and regrown in solvent. As this process does not allow for much rearrangement of the structure, it is suited to structures such as ligands that are noncovalently docked into a receptor such as Glide results.
+
+Molecular dynamics based FEP methods can be used to predict binding free energies for top compounds to enrich hit discovery
+
+## What are free energies?
+ 
+● ∆𝐺0 = ∆𝐻0 − 𝑇∆𝑆0 (as seen in PhysChem101)
+● ∆𝐻0 An Enthalpy (Energy) component
+● ∆𝑆0 An Entropy component
+● 𝑇 Temperature
+
+### Quick reminder:
+
+● Enthalpy tells us about heat/energy released, e.g. Liquid water at 100°C has a lower enthalpy than steam because condensation forms molecular interactions and releases energy
+● Entropy is a bit more abstract; it basically measures the “disorder” in a system. For the above example, liquid water has higher order, i.e. lower Entropy than steam because of the molecular interactions formed
+● A system always strives for a more negative free energy; this means lower Enthalpy, and higher Entropy
+
+## Why predict free energies?
+• What we care about are compound properties like:
+– Potency
+– Solubility
+– Stability
+– Membrane Permeability
+– pK-values
+– etc...
+
+* Each of these properties has a Free Energy associated with the chemical process (disregarding kinetics for now)
+* Computing these Free Energies reliably would make drug design (and much more chemistry) a lot easier
+ 
+ 
+
+ 
 # Module 8 AmpC Case Study
 
 

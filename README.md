@@ -323,9 +323,9 @@ Molecular dynamics based FEP methods can be used to predict binding free energie
  
 # Module 8 AmpC Case Study
 
-Assignment files are uploaded.
+Assignment files and videos are uploaded 
 
-We also conduct similar FEP+ simulation for PLK1 (2OWB) see the uploaded files and videos
+We also conduct similar FEP+ simulation for PLK1 (2OWB) see the uploaded files 
 
 
 

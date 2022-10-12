@@ -103,15 +103,15 @@ Active Learning technology offers a solution to this problem. Schrodingers Activ
 Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so.
 The 2D chemical structure of each molecule in a screening library is converted into a vector of numbers, in order for it to be included in the neural network. By docking only a fraction of the full library and using the scores to train a machine learning model, the entire library can be evaluated at a fraction of the speed. The top-ranked compounds predicted by the ML model can then undergo conventional virtual screening docking approaches.
 
-Say we want to dock a library of 10 Billion compounds - this is our complete dataset, and we only need a 2-dimensional representation of each compound in SMILES format to start this process.
+### Say we want to dock a library of 10 Billion compounds - this is our complete dataset, and we only need a 2-dimensional representation of each compound in SMILES format to start this process.
 
-Depending on our complete library size, we then decide how many compounds we want to use to train the Machine learning model. The minimum here is 15 compounds, but the default is 100,000 compounds.
+### Depending on our complete library size, we then decide how many compounds we want to use to train the Machine learning model. The minimum here is 15 compounds, but the default is 100,000 compounds.
 
-The next step is to dock the selected subset of our library, so in our example let’s say we have chosen to dock 100,000 compounds from our 10 billion compound library.
+### The next step is to dock the selected subset of our library, so in our example let’s say we have chosen to dock 100,000 compounds from our 10 billion compound library.
 
-Docking scores are analyzed together with the compound vector information
+### Docking scores are analyzed together with the compound vector information
 
-And the data from the docked ligands are used to train and generate a ML model, which can then be used to rank all of the compounds in the entire 10 billion compound library. Evaluating the entire population takes around 1milisecond per ligand. This is much faster than docking with Glide, which can take around 30 seconds per ligand.
+#### And the data from the docked ligands are used to train and generate a ML model, which can then be used to rank all of the compounds in the entire 10 billion compound library. Evaluating the entire population takes around 1milisecond per ligand. This is much faster than docking with Glide, which can take around 30 seconds per ligand.
 
 # Module 3 Target Validation for structure-based virtual screening
 

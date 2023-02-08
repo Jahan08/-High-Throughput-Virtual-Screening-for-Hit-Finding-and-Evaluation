@@ -207,6 +207,16 @@ Enamine REAL ~2M compounds library contains SMILES String and compund ID (ZINC I
 
 ### Note Ligand should be prepared at the same pH as the proteins were prepared. 
 
+#### Ligand based screening:
+
+Fundamental assumption: Chemical structure dictates chemical activity
+
+Similar chemical structures have similar chemical activity. Therefore every ligand-based method will:
+1. model building: a) begin with active compounds 
+                   b) describe what chemistry those compounds have in common
+2. Database screening: a) Find new compinds that match this description
+                       b) Compounds that match the description will also be active
+
 # Module 4.2 Receptor Grid generation
 
 * Step 1 Identifying interacting waters : kept the water molecules which interact with ligands and also facilitate the interaction between ligand and protein residue/s

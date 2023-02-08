@@ -50,9 +50,9 @@ As well as using Maestro in this course, participants will learn how to submit j
 •	Target: A macromolecule (most commonly a protein) that will be targeted by a small molecule in a drug discovery project. Often the small molecule will cause some conformational change or lock the macromolecule into a particular conformation and thus affect that macromolecule's activity and downstream signaling pathways.
 
 
-# Module 1.3 The Benefits of Screening Ultra-Large Libraries Transcript (
+# Module 1.3 The Benefits of Screening Ultra-Large Libraries Transcript 
 
-Schoichet paper : https://www.sciencedirect.com/science/article/pii/S0969212602007992 (2002)
+( Schoichet paper : https://www.sciencedirect.com/science/article/pii/S0969212602007992 (2002)
 
 Lyu paper : https://www.nature.com/articles/s41586-019-0917-9 (2019))
 
@@ -113,6 +113,12 @@ The 2D chemical structure of each molecule in a screening library is converted i
 
 #### And the data from the docked ligands are used to train and generate a ML model, which can then be used to rank all of the compounds in the entire 10 billion compound library. Evaluating the entire population takes around 1milisecond per ligand. This is much faster than docking with Glide, which can take around 30 seconds per ligand.
 
+#### more : https://www.youtube.com/watch?v=E_hbMxaihik (12 min)
+
+Complete dataset -> Select N Random Ligands -> Glide SP Dock N Ligands -> ML training of all docked ligands -> ML prediction -> going back to step 2 and repeat  
+                                                                                                                    |
+                                                                                                                    V
+                                                                                                                    Dock with Glide N-top-ranked by ML compounds
 # Module 3 Target Validation for structure-based virtual screening
 
 In order to discern whether our target of interest can be used in a virtual screening campaign, we need to answer a series of questions, ranging from “is there an available structure of our target” through to “where are the druggable regions and/or potency handles within the binding site”. We can use a series of computational tools to help answer these questions and inform the preparation of our target prior to a virtual screen.

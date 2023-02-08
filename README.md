@@ -285,7 +285,7 @@ we have inspected the Shape Screen (ligand-based) results that were filtered for
  
 ● Advanced docking methods:
 ● Glide with constraints, Glide XP
-● Induced Fit Docking (IFD)
+● Induced Fit Docking (IFD)- https://www.overleaf.com/project/63d7e92937f29d47ef340a60
 ● Covalent docking with CovDock
 ● Enumeration tools and automated docking with Ligand Designer
 
